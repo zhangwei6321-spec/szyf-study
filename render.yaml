@@ -1,0 +1,7 @@
+# Render 静态站点蓝图配置
+services:
+  - type: web
+    name: szyf-study
+    runtime: static
+    staticPublishPath: .
+    buildCommand: ""
