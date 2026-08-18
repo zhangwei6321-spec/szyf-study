@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>河南三支一扶 · 上岸备考学习网</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand" onclick="App.go('home')">
+      <span class="logo">扶</span>
+      <span>河南三支一扶<span class="zhuan">备考</span><small>助你一战上岸</small></span>
+    </div>
+    <nav class="nav" id="nav">
+      <a data-page="home" class="active">首页</a>
+      <a data-page="recite">考点背诵</a>
+      <a data-page="shizheng">时政热点</a>
+      <a data-page="koujue">速记口诀</a>
+      <a data-page="quiz">真题刷题</a>
+      <a data-page="wrong">错题本</a>
+    </nav>
+    <div class="searchbox">
+      <span class="ic">🔍</span>
+      <input id="searchInput" placeholder="搜索考点 / 题目…" oninput="App.onSearchInput(this.value)">
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- 首页 -->
+  <section class="page active" id="page-home"></section>
+
+  <!-- 考点背诵 -->
+  <section class="page" id="page-recite"></section>
+
+  <!-- 时政热点 -->
+  <section class="page" id="page-shizheng"></section>
+
+  <!-- 速记口诀 -->
+  <section class="page" id="page-koujue"></section>
+
+  <!-- 真题刷题 -->
+  <section class="page" id="page-quiz"></section>
+
+  <!-- 错题本 -->
+  <section class="page" id="page-wrong"></section>
+
+  <!-- 搜索结果 -->
+  <section class="page" id="page-search"></section>
+
+</main>
+
+<footer class="footer">
+  河南三支一扶 · 上岸备考学习网 —— 资料整理自《重考最新2026年河南三支一扶资料包》，仅供个人备考学习使用<br>
+  祝你顺利上岸 🌟
+</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <button class="close" onclick="App.closeModal()">✕</button>
+    <h2 id="modalTitle"></h2>
+    <div class="m-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- 数据（由提取脚本生成） -->
+<script src="js/data/knowledge.js"></script>
+<script src="js/data/shizheng.js"></script>
+<script src="js/data/koujue.js"></script>
+<script src="js/data/questions.js"></script>
+<script src="js/data/meta.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
